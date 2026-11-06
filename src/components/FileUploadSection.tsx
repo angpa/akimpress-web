@@ -12,6 +12,7 @@ import {
   Zap,
   Check
 } from 'lucide-react';
+import { IsometricPrintLayers } from './IsometricPrintLayers';
 
 export const FileUploadSection: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -263,6 +264,11 @@ export const FileUploadSection: React.FC = () => {
 
           </div>
 
+        </div>
+
+        {/* Isometric 3D Print Stack (Estilo Vite) */}
+        <div className="mt-14">
+          <IsometricPrintLayers />
         </div>
 
       </div>
