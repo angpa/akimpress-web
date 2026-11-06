@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased text-black bg-[#FFFDEB] selection:bg-feast-yellow selection:text-black;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom Feastables-style scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFE500;
+  border-left: 2px solid #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF007A;
+}
+
+/* Feastables Pop patterns */
+.bg-dots-pattern {
+  background-image: radial-gradient(#000000 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
+}
+
+.bg-dots-white {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.4) 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
+}
+
+.bg-stripes-yellow {
+  background: repeating-linear-gradient(
+    45deg,
+    #FFE500,
+    #FFE500 15px,
+    #FFD500 15px,
+    #FFD500 30px
+  );
+}
+
+.bg-hazard-tape {
+  background: repeating-linear-gradient(
+    -45deg,
+    #FFE500,
+    #FFE500 14px,
+    #000000 14px,
+    #000000 28px
+  );
+}
+
+/* Feastables Neo-Brutalist Button Utility */
+.btn-brutal {
+  @apply font-display font-black uppercase tracking-wider border-3 border-black shadow-brutal transition-all duration-150 inline-flex items-center justify-center select-none active:translate-x-1 active:translate-y-1 active:shadow-none hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-brutal-md cursor-pointer;
+}
+
+.btn-brutal-yellow {
+  @apply btn-brutal bg-feast-yellow text-black hover:bg-yellow-300;
+}
+
+.btn-brutal-blue {
+  @apply btn-brutal bg-feast-blue text-white hover:bg-blue-600;
+}
+
+.btn-brutal-pink {
+  @apply btn-brutal bg-feast-pink text-white hover:bg-pink-600;
+}
+
+.btn-brutal-lime {
+  @apply btn-brutal bg-feast-lime text-black hover:bg-lime-300;
+}
+
+.btn-brutal-white {
+  @apply btn-brutal bg-white text-black hover:bg-slate-100;
+}
+
+/* Card Neo-Brutalist Container */
+.card-brutal {
+  @apply bg-white border-3 border-black rounded-2xl shadow-brutal-md transition-all duration-200;
+}
+
+.card-brutal-hover {
+  @apply card-brutal hover:-translate-y-1 hover:shadow-brutal-lg;
+}
+
+/* Badge / Sticker */
+.sticker-badge {
+  @apply inline-flex items-center gap-1 font-display font-black uppercase text-xs px-3 py-1 rounded-full border-2 border-black shadow-brutal-sm;
+}
